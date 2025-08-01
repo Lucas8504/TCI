@@ -11,16 +11,27 @@
                 <GradientStop Color="#FFB3E5FC" Offset="0.0" />
                 <GradientStop Color="#FF81D4FA" Offset="1.0" />
             </LinearGradientBrush>
+        </ScrollView.Background>
 
-            <VerticalStackLayout
-                Padding="30,0"
-                Spacing="25">
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            VerticalOptions="Center">
 
-                <!--#region Temp -->
-                <!--#endregion-->
+            <!--#region Temp -->
+            <Frame>
+                <Label
+                    FontSize="Large"
+                    HorizontalOptions="Center"
+                    Text="Temperatua (°C)"
+                    TextColor="DimGray"/>
 
-            </VerticalStackLayout>
-        </ScrollView>
+
+            </Frame>
+            <!--#endregion-->
+
+        </VerticalStackLayout>
+    </ScrollView>
 
 
-    </ContentPage>
+</ContentPage>
