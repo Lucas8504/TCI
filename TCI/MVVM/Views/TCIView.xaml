@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges"
              x:Class="TCI.MVVM.Views.TCIView"
              Title="TCIView">
-
 
     <ScrollView>
         <ScrollView.Background>
@@ -20,18 +20,18 @@
 
             <!--#region Temp -->
             <Frame>
-                <Label
-                    FontSize="Large"
-                    HorizontalOptions="Center"
-                    Text="Temperatua (°C)"
-                    TextColor="DimGray"/>
-
-
+                <VerticalStackLayout>
+                    <Label
+                        FontSize="Large"
+                        HorizontalOptions="Center"
+                        Text="Temperatua (°C)"
+                        TextColor="DimGray"/>
+                    <gauge:SfLinearGauge Minimum="0" Maximum="100" Interval="10" ShowTicks="True" ShowLabels="True"/>
+                </VerticalStackLayout>
             </Frame>
             <!--#endregion-->
 
         </VerticalStackLayout>
     </ScrollView>
-
 
 </ContentPage>
