@@ -14,20 +14,17 @@
         </ScrollView.Background>
 
         <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25"
-            VerticalOptions="Center">
+            Padding="160"
+            Spacing="20"
+            VerticalOptions="Start"
+            HorizontalOptions="Start">
 
             <!--#region Temp -->
             <Frame>
-                <VerticalStackLayout>
-                    <Label
-                        FontSize="Large"
-                        HorizontalOptions="Center"
-                        Text="Temperatua (°C)"
-                        TextColor="DimGray"/>
-                    <gauge:SfLinearGauge Minimum="0" Maximum="100" Interval="10" ShowTicks="True" ShowLabels="True"/>
-                </VerticalStackLayout>
+
+
+                <gauge:SfLinearGauge Orientation="Vertical" Minimum="33" Maximum="43" Interval="1" ShowTicks="True" ShowLabels="True"/>
+
             </Frame>
             <!--#endregion-->
 
