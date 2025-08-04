@@ -21,10 +21,11 @@
 
             <!--#region Temp -->
             <Frame>
-
-
-                <gauge:SfLinearGauge Orientation="Vertical" Minimum="33" Maximum="43" Interval="1" ShowTicks="True" ShowLabels="True"/>
-
+                <gauge:SfLinearGauge Orientation="Vertical" Minimum="33" Maximum="43" Interval="1" ShowTicks="True" ShowLabels="True">
+                    <gauge:SfLinearGauge.BarPointers>
+                        <gauge:BarPointer Value="37" Fill="#FF4CAF50" />
+                    </gauge:SfLinearGauge.BarPointers>
+                </gauge:SfLinearGauge>
             </Frame>
             <!--#endregion-->
 
