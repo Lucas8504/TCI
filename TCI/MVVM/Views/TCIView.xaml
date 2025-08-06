@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges"
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              x:Class="TCI.MVVM.Views.TCIView"
              Title="TCIView">
 
@@ -20,14 +20,16 @@
             HorizontalOptions="Start">
 
             <!--#region Temp -->
-            <Frame>
-                <gauge:SfLinearGauge Orientation="Vertical" Minimum="33" Maximum="43" Interval="1" ShowTicks="True" ShowLabels="True">
-                    <gauge:SfLinearGauge.BarPointers
-                        x:name="TemPointer">
-                        <gauge:BarPointer Value="{Binding Source={x:Reference TemPointer}}" Fill="#FF4CAF50" />
-                    </gauge:SfLinearGauge.BarPointers>
-                </gauge:SfLinearGauge>
-            </Frame>
+            <VerticalStackLayout>
+                <sliders:SfSlider Orientation="Vertical"
+                                  Minimum="0"
+                                  Maximum="10"
+                                  Value="5"
+                                  Interval="2"
+                                  ShowLabels="True"
+                                  ShowTicks="True"
+                                  MinorTicksPerInterval="1" />
+            </VerticalStackLayout>
             <!--#endregion-->
 
         </VerticalStackLayout>
