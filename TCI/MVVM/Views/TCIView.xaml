@@ -14,7 +14,7 @@
         </ScrollView.Background>
 
         <VerticalStackLayout
-            Padding="160"
+            Padding="150"
             Spacing="20"
             VerticalOptions="Start"
             HorizontalOptions="Start">
@@ -22,13 +22,22 @@
             <!--#region Temp -->
             <VerticalStackLayout>
                 <sliders:SfSlider Orientation="Vertical"
-                                  Minimum="0"
-                                  Maximum="10"
+                                  Minimum="30"
+                                  Maximum="42"
                                   Value="5"
-                                  Interval="2"
+                                  Interval="1"
                                   ShowLabels="True"
                                   ShowTicks="True"
-                                  MinorTicksPerInterval="1" />
+                                  MinorTicksPerInterval="1">
+
+                    <sliders:SfSlider.TrackStyle>
+                        <sliders:SliderTrackStyle ActiveFill="#EE3F3F"
+                                                  InactiveFill="#F7B1AE" />
+                    </sliders:SfSlider.TrackStyle>
+
+
+                </sliders:SfSlider>
+
             </VerticalStackLayout>
             <!--#endregion-->
 
