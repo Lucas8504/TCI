@@ -16,27 +16,26 @@ namespace TCI.MVVM.Models
         { 
             get
             {
-                string template = "BMI: #";
                 if (Temp < 35)
                 {
-                    return template.Replace("#", "#");
+                    return "#49B6D7";
                 }
                 else if (Temp > 35 && Temp <= 37.5)
                 {
-                    return template.Replace("#", "Moderate Thinness");
-                }
-                else if (Temp > 35 && Temp <= 37.5)
-                {
-                    return template.Replace("#", "Moderate Thinness");
+                    return "#407712";
                 }
                 else if (Temp > 37.5 && Temp <= 39)
                 {
-                    return template.Replace("#", "Moderate Thinness");
+                    return "#E5611B";
+                }
+                else if (Temp > 39)
+                {
+                    return "#7F1423";
                 }
                 else
-                { return template.Replace("#", "Normal Weight"); }
+                    return "#49B6D7";
             }
-                
+
         }
 
     }
