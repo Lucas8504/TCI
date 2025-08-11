@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TCI.MVVM.Models
 {
-    class TCI
+    public class TCI
     {
         private string? grav;
 
