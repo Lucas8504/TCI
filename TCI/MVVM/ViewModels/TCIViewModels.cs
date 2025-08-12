@@ -13,7 +13,7 @@ namespace TCI.MVVM.ViewModels
         public TCIViewModel()
         {
             TCI = new Models.TCI();
-            TCI.Temp = 36.5f; // Default temperature
+            TCI.Temp = 36; // Default temperature
         }
     }
 }
