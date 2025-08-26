@@ -21,21 +21,21 @@
 
             <!--#region Temp -->
             <VerticalStackLayout>
-                <sliders:SfSlider
+                <sliders:SfSlider 
                     x:Name="SliderTemp"
                     Orientation="Vertical"
-                    Minimum="30"
-                    Maximum="42"
-                    Value= "{Binding TCI.Temp}"
-                    Interval="1"
-                    ShowLabels="True"
-                    ShowTicks="True"
-                    MinorTicksPerInterval="1">
+                                  Minimum="30"
+                                  Maximum="42"
+                                  Value= "{Binding TCI.Temp}"
+                                  Interval="1"
+                                  ShowLabels="True"
+                                  ShowTicks="True"
+                                  MinorTicksPerInterval="1">
 
                     <sliders:SfSlider.TrackStyle>
-                        <sliders:SliderTrackStyle ActiveFill="{Binding TCI.Grav}"
-                                                  InactiveFill="#F7B1AE"
-                                                  />
+                        <sliders:SliderTrackStyle ActiveFill="#EE3F3F"
+                                                  InactiveFill="#F7B1AE" 
+                                                 />
                     </sliders:SfSlider.TrackStyle>
 
 
