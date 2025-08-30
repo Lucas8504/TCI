@@ -2,8 +2,18 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:conv="clr-namespace:TCI.Converters"
              x:Class="TCI.MVVM.Views.TCIView"
              Title="TCIView">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <conv:TempToColorConverter x:Key="TempToColorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+
 
     <ScrollView>
         <ScrollView.Background>
@@ -21,21 +31,21 @@
 
             <!--#region Temp -->
             <VerticalStackLayout>
-                <sliders:SfSlider 
+                <sliders:SfSlider
                     x:Name="SliderTemp"
                     Orientation="Vertical"
-                                  Minimum="30"
-                                  Maximum="42"
-                                  Value= "{Binding TCI.Temp}"
-                                  Interval="1"
-                                  ShowLabels="True"
-                                  ShowTicks="True"
-                                  MinorTicksPerInterval="1">
+                    Minimum="30"
+                    Maximum="42"
+                    Value="{Binding TCI.Temp}"
+                    Interval="1"
+                    ShowLabels="True"
+                    ShowTicks="True"
+                    MinorTicksPerInterval="1">
 
                     <sliders:SfSlider.TrackStyle>
-                        <sliders:SliderTrackStyle ActiveFill="#EE3F3F"
-                                                  InactiveFill="#F7B1AE" 
-                                                 />
+                        <sliders:SliderTrackStyle
+                            ActiveFill="{Binding TCI.Temp, Converter={StaticResource TempToColorConverter}}"
+                            InactiveFill="#F7B1AE" />
                     </sliders:SfSlider.TrackStyle>
 
 
