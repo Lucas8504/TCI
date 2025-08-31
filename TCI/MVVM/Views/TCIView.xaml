@@ -36,7 +36,7 @@
                     Orientation="Vertical"
                     Minimum="30"
                     Maximum="42"
-                    Value="{Binding TCI.Temp}"
+                    Value="{Binding TCI.Temp, Mode=TwoWay}"
                     Interval="1"
                     ShowLabels="True"
                     ShowTicks="True"
@@ -44,12 +44,12 @@
 
                     <sliders:SfSlider.TrackStyle>
                         <sliders:SliderTrackStyle
-                            ActiveFill="{Binding TCI.Temp, Converter={StaticResource TempToColorConverter}}"
-                            InactiveFill="#F7B1AE" />
+                            ActiveFill="{Binding TCI.Grav}"
+                            InactiveFill="{Binding TCI.InactiveColor}"/>
                     </sliders:SfSlider.TrackStyle>
 
-
                 </sliders:SfSlider>
+
 
             </VerticalStackLayout>
             <!--#endregion-->

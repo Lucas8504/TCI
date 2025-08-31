@@ -15,7 +15,8 @@ namespace TCI.Converters
                 if (temp < 39) return Color.FromArgb("#FF9800");   // naranja
                 return Color.FromArgb("#F44336");                  // rojo
             }
-            return Colors.Gray;
+
+            return value;
         }
 
         public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
