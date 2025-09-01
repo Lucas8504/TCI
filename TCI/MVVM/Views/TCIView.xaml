@@ -51,6 +51,18 @@
                 </sliders:SfSlider>
 
 
+                <Label Text="{Binding TCI.TempTexto}"
+                       FontSize="40"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       TextColor="{Binding TCI.ActiveColor}" />
+
+                <Label Text="{Binding TCI.Estado}"
+                       FontSize="20"
+                       HorizontalOptions="Center"
+                       TextColor="{Binding TCI.ActiveColor}" />
+
+
             </VerticalStackLayout>
             <!--#endregion-->
 

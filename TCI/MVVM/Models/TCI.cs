@@ -43,5 +43,30 @@ namespace TCI.MVVM.Models
                     return new SolidColorBrush(Color.FromArgb("#E0E0E0")); // Gris claro
             }
         }
+
+        [DependsOn(nameof(Temp))]
+        public string Estado
+        {
+            get
+            {
+                if (Temp < 35)
+                    return "Hipotermia";
+                else if (Temp >= 35 && Temp <= 37.5)
+                    return "Normal";
+                else if (Temp > 37.5 && Temp <= 39)
+                    return "Fiebre leve";
+                else if (Temp > 39)
+                    return "Fiebre alta";
+                else
+                    return "Desconocido";
+            }
+        }
+
+        [DependsOn(nameof(Temp))]
+        public string TempTexto
+        {
+            get => $"{Temp:0.0} °C";
+        }
+
     }
 }
