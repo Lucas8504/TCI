@@ -68,5 +68,24 @@ namespace TCI.MVVM.Models
             get => $"{Temp:0.0} °C";
         }
 
+        [DependsOn(nameof(Temp))]
+        public string Recomendacion
+        {
+            get
+            {
+                if (Temp < 35)
+                    return "Hipotermia: Abriga bien al paciente, proporciona líquidos calientes y busca atención médica si la temperatura sigue bajando.";
+                else if (Temp >= 35 && Temp <= 37.5)
+                    return "Temperatura normal: No se requiere tratamiento. Mantener hábitos saludables.";
+                else if (Temp > 37.5 && Temp <= 39)
+                    return "Fiebre leve: Reposo, hidratación y ropa ligera. Se pueden usar antipiréticos si es necesario.";
+                else if (Temp > 39)
+                    return "Fiebre alta: Acudir al médico. Mantener hidratación y controlar la temperatura con compresas o medicación indicada.";
+                else
+                    return "Estado desconocido.";
+            }
+        }
+
+
     }
 }

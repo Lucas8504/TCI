@@ -24,13 +24,12 @@
         </ScrollView.Background>
 
         <VerticalStackLayout
-            Padding="150"
-            Spacing="20"
             VerticalOptions="Start"
             HorizontalOptions="Start">
 
             <!--#region Temp -->
-            <VerticalStackLayout>
+            <VerticalStackLayout  Padding="55"
+                                  >
                 <sliders:SfSlider
                     x:Name="SliderTemp"
                     Orientation="Vertical"
@@ -55,13 +54,14 @@
 
                 </sliders:SfSlider>
 
-
+                <!-- Texto de temperatura -->
                 <Label Text="{Binding TCI.TempTexto}"
                        FontSize="25"
                        FontAttributes="Bold"
                        HorizontalOptions="Center"
                        TextColor="{Binding TCI.ActiveColor}" />
 
+                <!--Texto de Estado -->
                 <Label Text="{Binding TCI.Estado}"
                        FontSize="14"
                        HorizontalOptions="Center"
@@ -69,8 +69,26 @@
                        TextColor="{Binding TCI.ActiveColor}" />
 
 
+
             </VerticalStackLayout>
             <!--#endregion-->
+
+            <VerticalStackLayout
+                Padding="1"
+                Spacing="2"
+                VerticalOptions="Start"
+                HorizontalOptions="Start">
+
+                <!-- Recomendación de tratamiento -->
+                <Label Text="{Binding TCI.Recomendacion}"
+                       FontSize="16"
+                       HorizontalOptions="Start"
+                       HorizontalTextAlignment="Start"
+                       TextColor="Black"
+                       Margin="10,0,0,3"/>
+
+
+            </VerticalStackLayout>
 
         </VerticalStackLayout>
     </ScrollView>
