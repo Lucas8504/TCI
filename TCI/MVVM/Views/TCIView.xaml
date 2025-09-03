@@ -34,7 +34,7 @@
                 <sliders:SfSlider
                     x:Name="SliderTemp"
                     Orientation="Vertical"
-                    Minimum="30"
+                    Minimum="33"
                     Maximum="42"
                     Value="{Binding TCI.Temp, Mode=TwoWay}"
                     Interval="1"
@@ -52,14 +52,15 @@
 
 
                 <Label Text="{Binding TCI.TempTexto}"
-                       FontSize="40"
+                       FontSize="25"
                        FontAttributes="Bold"
                        HorizontalOptions="Center"
                        TextColor="{Binding TCI.ActiveColor}" />
 
                 <Label Text="{Binding TCI.Estado}"
-                       FontSize="20"
+                       FontSize="14"
                        HorizontalOptions="Center"
+                       FontAttributes="Bold"
                        TextColor="{Binding TCI.ActiveColor}" />
 
 
