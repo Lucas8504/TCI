@@ -45,8 +45,13 @@
                     <sliders:SfSlider.TrackStyle>
                         <sliders:SliderTrackStyle
                             ActiveFill="{Binding TCI.Grav}"
-                            InactiveFill="{Binding TCI.InactiveColor}"/>
+                            InactiveFill="{Binding TCI.InactiveColor}"
+                            />
+
                     </sliders:SfSlider.TrackStyle>
+                    <sliders:SfSlider.ThumbStyle>
+                        <sliders:SliderThumbStyle Fill="{Binding TCI.Grav}" />
+                    </sliders:SfSlider.ThumbStyle>
 
                 </sliders:SfSlider>
 
